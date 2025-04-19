@@ -8,7 +8,7 @@ import {
   Revenue,
 } from "./definitions";
 import { formatCurrency } from "./utils";
-// import { unstable_noStore as noStore } from "next/cache";
+import { unstable_noStore as noStore } from "next/cache";
 
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: "require" });
 
@@ -32,7 +32,7 @@ export async function fetchRevenue() {
 }
 
 export async function fetchLatestInvoices() {
-  // noStore(); // Prevent caching of this data fetch
+  noStore(); // Prevent caching of this data fetch
   try {
     console.log("Fetching invoice data...");
     await new Promise((resolve) => setTimeout(resolve, 1000));
