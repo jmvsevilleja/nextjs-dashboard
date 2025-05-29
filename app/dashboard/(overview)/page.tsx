@@ -13,10 +13,10 @@ import {
   CardsSkeleton,
 } from "@/app/ui/skeletons";
 import CardWrapper from "@/app/ui/dashboard/cards";
-import { unstable_noStore as noStore } from "next/cache";
+// import { unstable_noStore as noStore } from "next/cache";
 
 export default async function Page() {
-  noStore(); // Add this to prevent static generation and enable dynamic loading
+  // noStore(); // Add this to prevent static generation and enable dynamic loading
   // const revenue = await fetchRevenue();
   // const latestInvoices = await fetchLatestInvoices();
   // const cardData = await fetchCardData();
