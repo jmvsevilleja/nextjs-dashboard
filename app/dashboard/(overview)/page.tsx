@@ -13,7 +13,11 @@ import {
   CardsSkeleton,
 } from "@/app/ui/skeletons";
 import CardWrapper from "@/app/ui/dashboard/cards";
+
 // import { unstable_noStore as noStore } from "next/cache";
+
+// Add this export to enable revalidation every 60 seconds
+export const revalidate = 60;
 
 export default async function Page() {
   // noStore(); // Add this to prevent static generation and enable dynamic loading
